@@ -1,0 +1,44 @@
+import axios from "axios";
+import toast from "react-hot-toast";
+import { useState } from "react";
+import { useAppDispatch } from "./useAppDispatch";
+import { useNavigate } from "react-router-dom";
+import { SendRequestProps } from "../utils/types";
+import { getRequestConfig } from "../utils/helpers";
+
+const useFetch = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const sendRequest = async ({ type, formData, slug }: SendRequestProps) => {
+    try {
+      setIsLoading(true);
+
+      const config = getRequestConfig(type, slug);
+      if (!config) throw Error("Invalid request type!");
+
+      const { method, url, isShowToast, isDispatch, action, redirect } = config;
+
+      const { data } = await axios({ method, url, data: formData });
+
+      setIsLoading(false);
+
+      if (data.success) {
+        if (isDispatch && action) dispatch(action(data.payload));
+        if (isShowToast) toast.success(data.message);
+        if (redirect?.success) navigate(redirect.success);
+      } else {
+        if (redirect?.error) navigate(redirect.error);
+        throw data.payload;
+      }
+    } catch (error: any) {
+      setIsLoading(false);
+      toast.error(error.response.data.payload || error.response.data.message || "Something went wrong!");
+    }
+  };
+
+  return { isLoading, sendRequest };
+};
+
+export default useFetch;
