@@ -3,21 +3,17 @@ import { ActionCreatorWithPayload } from "@reduxjs/toolkit";
 export enum REQUEST_METHOD {
   GET = "get",
   POST = "post",
+  PUT = "put",
+  DELETE = "delete",
 }
 
 export enum REQUEST_TYPE {
   LOGIN = "login",
+  USER = "users",
+  DELETE_USER = "delete_user",
+  UPDATE_USER = "update_user",
+  ADD_USER = "add_user",
 }
-
-export type CustomResponse = {
-  error: boolean;
-  success: boolean;
-  code: number;
-  httpStatus: number;
-  message: string;
-  payload: any;
-  meta: null;
-};
 
 export type RequestConfig = {
   url: string | undefined;
@@ -33,6 +29,6 @@ export type RequestConfig = {
 
 export type SendRequestProps = {
   type: REQUEST_TYPE;
-  slug?: string;
   formData?: any;
+  slug?: string;
 };

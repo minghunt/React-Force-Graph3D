@@ -5,9 +5,11 @@ import { useAppDispatch } from "./useAppDispatch";
 import { useNavigate } from "react-router-dom";
 import { SendRequestProps } from "../utils/types";
 import { getRequestConfig } from "../utils/helpers";
+import { useAppSelector } from "./useAppSelector";
 
 const useFetch = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const token = useAppSelector((state) => state.auth.accessToken);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
@@ -20,7 +22,13 @@ const useFetch = () => {
 
       const { method, url, isShowToast, isDispatch, action, redirect } = config;
 
-      const { data } = await axios({ method, url, data: formData });
+      const customAxios = axios.create({
+        headers: {
+          Authorization: `Bear ${token}`,
+        },
+      });
+
+      const { data } = await customAxios({ method, url, data: formData });
 
       setIsLoading(false);
 

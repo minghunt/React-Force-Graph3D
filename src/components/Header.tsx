@@ -86,7 +86,7 @@ const Header = () => {
         <div onClick={() => setIsShowSidebar(false)} className="fixed z-10 inset-0">
           <div
             onClick={(event) => event.stopPropagation()}
-            className="absolute glassmorphism rounded-t-none z-10 top-16 left-4 flex flex-col w-64 px-4 pb-8 pt-12 overflow-y-auto"
+            className="absolute glassmorphism rounded-t-none z-10 top-12 left-4 flex flex-col w-64 px-4 pb-8 pt-12 overflow-y-auto"
           >
             <nav className="flex flex-col gap-4">
               {navLinks.map((group) => {
@@ -117,8 +117,8 @@ const Header = () => {
           {isShowSidebar ? <LuXCircle /> : <LuMenu />}
         </div>
         <div className="flex justify-center items-center gap-2">
-          <img src="favicon.ico" alt="Logo" />
-          <h1 className="font-bold text-4xl">InfoSec IOC</h1>
+          <img className="w-6 aspect-square" src="favicon.ico" alt="Logo" />
+          <h1 className="font-bold text-2xl">InfoSec IOC</h1>
         </div>
         <div className="flex gap-4 justify-end items-center text-white">
           <div className="group cursor-pointer">
@@ -134,7 +134,7 @@ const Header = () => {
         <div onClick={() => setIsShowMenu(false)} className="fixed z-10 inset-0">
           <div
             onClick={(event) => event.stopPropagation()}
-            className="absolute z-10 glassmorphism rounded-t-none top-16 right-4 flex-col w-64 px-4 pb-8 pt-12 overflow-y-auto"
+            className="absolute z-10 glassmorphism rounded-t-none top-12 right-4 flex-col w-64 px-4 pb-8 pt-12 overflow-y-auto"
           >
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">

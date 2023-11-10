@@ -55,7 +55,7 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="text-white rounded-lg glassmorphism-dark flex flex-col w-64 h-screen px-5 py-8 overflow-y-hidden border-r rtl:border-r-0 rtl:border-l">
+    <aside className="text-white rounded-lg glassmorphism flex flex-col w-64 h-screen px-5 py-8 overflow-y-hidden border-r rtl:border-r-0 rtl:border-l">
       <div className="flex justify-center items-center gap-2">
         <h1 className="font-bold text-2xl uppercase">InfoSec IOC</h1>
       </div>

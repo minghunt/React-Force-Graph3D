@@ -4,10 +4,10 @@ import SidebarLayout from "../layouts/SidebarLayout";
 
 const MainLayout = lazy(() => import("../layouts/MainLayout"));
 const Home = lazy(() => import("../pages/Home"));
-const Dashboard1 = lazy(() => import("../pages/dashboards/Dashboard1"));
-const Dashboard2 = lazy(() => import("../pages/dashboards/Dashboard2"));
-const Dashboard3 = lazy(() => import("../pages/dashboards/Dashboard3"));
-const Dashboard4 = lazy(() => import("../pages/dashboards/Dashboard4"));
+const Dashboard1 = lazy(() => import("../pages/Dashboards/Dashboard1"));
+const Dashboard2 = lazy(() => import("../pages/Dashboards/Dashboard2"));
+const Dashboard3 = lazy(() => import("../pages/Dashboards/Dashboard3"));
+const Dashboard4 = lazy(() => import("../pages/Dashboards/Dashboard4"));
 
 const ProtectedRouter = () => {
   return (

@@ -1,10 +1,13 @@
+import Main from "../AccountManage/Main";
+
 const Dashboard1 = () => {
   return (
-    <section className="flex-1 grid grid-cols-2 gap-4">
+    <section className="flex-1">
+      <Main />
+      {/* <div className="glassmorphism"></div>
       <div className="glassmorphism"></div>
       <div className="glassmorphism"></div>
-      <div className="glassmorphism"></div>
-      <div className="glassmorphism"></div>
+      <div className="glassmorphism"></div> */}
     </section>
   );
 };
