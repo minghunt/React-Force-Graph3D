@@ -14,7 +14,10 @@ const App = () => {
         position="top-center"
         reverseOrder={false}
         containerStyle={{ inset: 20 }}
-        toastOptions={{ duration: 3000 }}
+        toastOptions={{
+          duration: 3000,
+          style: { background: "#0006", color: "#fff", backdropFilter: "blur(12px)", border: "1px solid #fff3" },
+        }}
       />
     </BrowserRouter>
   );

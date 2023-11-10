@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <div className="text-white p-12 backdrop-blur-md bg-white/20 rounded-2xl shadow-2xl border border-white/20">
+    <div className="glassmorphism px-6 py-12">
       <form onSubmit={handleSubmit} className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-bold text-center uppercase">

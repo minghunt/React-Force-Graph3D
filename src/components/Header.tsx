@@ -14,19 +14,27 @@ import {
   LuSettings,
   LuPalette,
   LuLogOut,
+  LuMail,
+  LuSettings2,
+  LuBellRing,
+  LuUser2,
+  LuPanelRightClose,
 } from "react-icons/lu";
 import { useAppSelector } from "../hooks/useAppSelector";
+import toast from "react-hot-toast";
 
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [isShowSidebar, setIsShowSidebar] = useState(false);
-  const userName = useAppSelector((state) => state.auth.user.name);
+  const [isShowMenu, setIsShowMenu] = useState(false);
+  const user = useAppSelector((state) => state.auth.user);
 
   const navLinks = [
     {
       title: "Dashboard",
       items: [
+        { title: "Sidebar", icon: <LuPanelRightClose />, link: "/sidebar" },
         { title: "6 sections", icon: <LuHome />, link: "/" },
         { title: "4 sections", icon: <LuLayoutDashboard />, link: "/dashboard_01" },
         { title: "5 sections (2/3)", icon: <LuLayoutDashboard />, link: "/dashboard_02" },
@@ -54,6 +62,14 @@ const Header = () => {
     setIsShowSidebar((previousState) => !previousState);
   };
 
+  const handleToggleMenu = () => {
+    setIsShowMenu((previousState) => !previousState);
+  };
+
+  const handleSettings = () => {
+    toast.success("Open modal settings");
+  };
+
   const handleSelect = (path: string) => {
     if (path.length > 0) navigate(path);
     setIsShowSidebar(false);
@@ -70,7 +86,7 @@ const Header = () => {
         <div onClick={() => setIsShowSidebar(false)} className="fixed z-10 inset-0">
           <div
             onClick={(event) => event.stopPropagation()}
-            className="absolute glassmorphism rounded-t-none z-10 top-16 left-4 flex flex-col w-64 px-4 py-8 overflow-y-auto"
+            className="absolute glassmorphism rounded-t-none z-10 top-16 left-4 flex flex-col w-64 px-4 pb-8 pt-12 overflow-y-auto"
           >
             <nav className="flex flex-col gap-4">
               {navLinks.map((group) => {
@@ -96,7 +112,7 @@ const Header = () => {
           </div>
         </div>
       )}
-      <header className="z-20 glassmorphism grid grid-cols-3 items-center px-4">
+      <header className="z-20 relative glassmorphism grid grid-cols-3 items-center px-4">
         <div onClick={handleToggleSidebar} className="cursor-pointer text-white text-2xl w-fit">
           {isShowSidebar ? <LuXCircle /> : <LuMenu />}
         </div>
@@ -105,39 +121,54 @@ const Header = () => {
           <h1 className="font-bold text-4xl">InfoSec IOC</h1>
         </div>
         <div className="flex gap-4 justify-end items-center text-white">
-          <LuBell className="text-2xl" />
-          <div onClick={handleLogout} className="flex items-center gap-1">
-            <LuUserCircle2 className="text-2xl" />
-            <div className="font-bold text-sm">Hi, {userName}!</div>
-            {/* <div
-              onClick={(event) => event.stopPropagation()}
-              className="hidden group-hover:flex absolute glassmorphism top-8 right-0 flex-col w-64 px-4 py-8 overflow-y-auto"
-            >
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-1">
-                  <div className="text-xs text-white/50 uppercase ml-2">Information</div>
-                  <div
-                    onClick={handleLogout}
-                    className="cursor-pointer flex items-center gap-1 p-2 rounded-lg hover:bg-white/20"
-                  >
-                    Username
-                  </div>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <div className="text-xs text-white/50 uppercase ml-2">Account</div>
-                  <div
-                    onClick={handleLogout}
-                    className="cursor-pointer flex items-center gap-1 p-2 rounded-lg hover:bg-white/20"
-                  >
-                    <LuLogOut />
-                    Logout
-                  </div>
-                </div>
-              </div>
-            </div> */}
+          <div className="group cursor-pointer">
+            <LuBell className="group-hover:hidden text-2xl" />
+            <LuBellRing className="hidden group-hover:block text-2xl" />
+          </div>
+          <div onClick={handleToggleMenu} className="cursor-pointer text-white text-2xl w-fit">
+            {isShowMenu ? <LuXCircle /> : <LuUserCircle2 />}
           </div>
         </div>
       </header>
+      {isShowMenu && (
+        <div onClick={() => setIsShowMenu(false)} className="fixed z-10 inset-0">
+          <div
+            onClick={(event) => event.stopPropagation()}
+            className="absolute z-10 glassmorphism rounded-t-none top-16 right-4 flex-col w-64 px-4 pb-8 pt-12 overflow-y-auto"
+          >
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-1">
+                <div className="text-xs text-white/50 uppercase ml-2">Information</div>
+                <div className="flex items-center gap-1 p-2 rounded-lg">
+                  <LuUser2 />
+                  {user.name}
+                </div>
+                <div className="flex items-center gap-1 p-2 rounded-lg">
+                  <LuMail />
+                  {user.email}
+                </div>
+              </div>
+              <div className="flex flex-col gap-1">
+                <div className="text-xs text-white/50 uppercase ml-2">Account</div>
+                <div
+                  onClick={handleSettings}
+                  className="cursor-pointer flex items-center gap-1 p-2 rounded-lg hover:bg-white/20"
+                >
+                  <LuSettings2 />
+                  Settings
+                </div>
+                <div
+                  onClick={handleLogout}
+                  className="cursor-pointer flex items-center gap-1 p-2 rounded-lg hover:bg-white/20"
+                >
+                  <LuLogOut />
+                  Logout
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
