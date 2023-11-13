@@ -1,13 +1,13 @@
 import { PiXBold } from "react-icons/pi";
 import { Title, ActionIcon, Input, Button } from "rizzui";
-import { useModal } from "../../hooks/useModal";
-import { UserDetail } from "../../utils/types/user";
-import { formatDate } from "../../utils/helpers/format-date";
+import { useModal } from "@/hooks/useModal";
+import { UserDetail } from "@/utils/types/user";
+import { formatDate } from "@/utils/helpers/format-date";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { RULES } from "../../utils/helpers/rules";
-import useFetch from "../../hooks/useFetch";
-import { REQUEST_TYPE } from "../../utils/types";
+import { RULES } from "@/utils/helpers/rules";
+import useFetch from "@/hooks/useFetch";
+import { REQUEST_TYPE } from "@/utils/types";
 
 type EidtUserProps = {
   data: UserDetail;
@@ -44,7 +44,7 @@ export const EditUser: React.FC<EidtUserProps> = ({ data }) => {
 
       await sendRequest({
         type: REQUEST_TYPE.UPDATE_USER,
-        data: report,
+        formData: report,
       });
 
       sendRequest({ type: REQUEST_TYPE.USER });

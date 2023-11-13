@@ -20,8 +20,12 @@
 }
 
 @layer components {
-  .bg-image-custom {
+  .bg-image-main {
     @apply bg-[url('assets/images/background3.jpg')] bg-center bg-cover;
+  }
+
+  .bg-image-login {
+    @apply bg-[url('assets/images/background4.jpg')] bg-center bg-cover;
   }
   /* .bg-image-custom {
     @apply bg-[url('https://img.freepik.com/premium-photo/design-with-geometric-shapes-template-with-3d-elements_751833-6.jpg?w=826')] bg-center bg-cover;

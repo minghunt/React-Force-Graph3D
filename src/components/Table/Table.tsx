@@ -1,10 +1,10 @@
 import React from "react";
 
-import cn from "../../utils/helpers/class-names";
-import WidgetCard from "../ui/WidgetCard";
+import cn from "@/utils/helpers/class-names";
+import WidgetCard from "@/components/ui/WidgetCard";
 import { Button } from "rizzui";
-import { useTable } from "../../hooks/useTable";
-import { useColumn } from "../../hooks/useColumn";
+import { useTable } from "@/hooks/useTable";
+import { useColumn } from "@/hooks/useColumn";
 
 type ColumnTypes = {
   data?: any[];
@@ -114,8 +114,7 @@ export default function BasicTableWidget({
   );
 
   // const { visibleColumns } = useColumn(columns);
-  const { visibleColumns, checkedColumns, setCheckedColumns } =
-    useColumn(columns);
+  const { visibleColumns, checkedColumns, setCheckedColumns } = useColumn(columns);
 
   return (
     <WidgetCard
@@ -138,9 +137,7 @@ export default function BasicTableWidget({
           Add New
         </Button>
       </div>
-      <div
-        className={cn("table-wrapper flex-grow", noGutter && "-mx-5 lg:-mx-7")}
-      >
+      <div className={cn("table-wrapper flex-grow", noGutter && "-mx-5 lg:-mx-7")}>
         <ControlledTable
           isLoading={isLoading}
           data={tableData}
@@ -192,8 +189,7 @@ const classes = {
     "[&_.rc-table-content]:overflow-x-auto [&_table]:w-full [&_.rc-table-row:hover]:bg-gray-50 [&_.rc-table-row-expand-icon-cell]:w-14",
   thead:
     "[&_thead]:text-left [&_thead]:rtl:text-right [&_th.rc-table-cell]:uppercase [&_th.rc-table-cell]:text-xs [&_th.rc-table-cell]:font-semibold [&_th.rc-table-cell]:tracking-wider [&_th.rc-table-cell]:text-gray-500 ",
-  tCell:
-    "[&_.rc-table-cell]:px-3 [&_th.rc-table-cell]:py-3 [&_td.rc-table-cell]:py-4",
+  tCell: "[&_.rc-table-cell]:px-3 [&_th.rc-table-cell]:py-3 [&_td.rc-table-cell]:py-4",
   variants: {
     classic:
       "[&_thead]:bg-gray-100 [&_.rc-table-container]:border-x [&_.rc-table-container]:border-gray-200/70 [&_td.rc-table-cell]:border-b [&_td.rc-table-cell]:border-gray-200/70 [&_thead]:border-y [&_thead]:border-gray-200/70",
@@ -206,14 +202,12 @@ const classes = {
     retro:
       "[&_thead]:border-y [&_thead]:border-gray-200/70 [&_tbody_tr:last-child_td.rc-table-cell]:border-b [&_tbody_tr:last-child_td.rc-table-cell]:border-gray-200/70",
   },
-  striped:
-    "[&_.rc-table-row:nth-child(2n)_.rc-table-cell]:bg-gray-100/50 [&_.rc-table-row:hover]:bg-transparent",
+  striped: "[&_.rc-table-row:nth-child(2n)_.rc-table-cell]:bg-gray-100/50 [&_.rc-table-row:hover]:bg-transparent",
 };
 
 type RCTableProps = ExtractProps<typeof RcTable>;
 
-export interface TableProps
-  extends Omit<RCTableProps, "className" | "emptyText"> {
+export interface TableProps extends Omit<RCTableProps, "className" | "emptyText"> {
   /** Set empty text, it will only appear when table has no data */
   emptyText?: React.ReactElement;
   /** The variants of the component are: */
@@ -224,13 +218,7 @@ export interface TableProps
   className?: string;
 }
 
-export function Table({
-  striped,
-  variant = "modern",
-  emptyText,
-  className,
-  ...props
-}: TableProps) {
+export function Table({ striped, variant = "modern", emptyText, className, ...props }: TableProps) {
   return (
     <RcTable
       className={cn(
@@ -291,28 +279,16 @@ export function HeaderCell({
   className,
 }: HeaderCellProps) {
   if (ellipsis && width === undefined) {
-    console.warn(
-      "When ellipsis is true make sure you are using the same column width in HeaderCell component too."
-    );
+    console.warn("When ellipsis is true make sure you are using the same column width in HeaderCell component too.");
   }
   if (width !== undefined && ellipsis !== true) {
-    console.warn(
-      "width prop without ellipsis won't work, please set ellipsis prop true."
-    );
+    console.warn("width prop without ellipsis won't work, please set ellipsis prop true.");
   }
   return (
     <div
-      className={cn(
-        "flex items-center gap-1 ",
-        sortable && "cursor-pointer",
-        handleTextAlignment(align),
-        className
-      )}
+      className={cn("flex items-center gap-1 ", sortable && "cursor-pointer", handleTextAlignment(align), className)}
     >
-      <div
-        {...(ellipsis && { className: "truncate" })}
-        {...(ellipsis && width && { style: { width } })}
-      >
+      <div {...(ellipsis && { className: "truncate" })} {...(ellipsis && width && { style: { width } })}>
         {title}
       </div>
       {sortable && (

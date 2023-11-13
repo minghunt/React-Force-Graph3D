@@ -1,9 +1,9 @@
-import { Suspense, lazy } from "react";
+import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import { useAppSelector } from "../hooks/useAppSelector";
-import PublicRouter from "./PublicRouter";
-import ProtectedRouter from "./ProtectedRouter";
-import Loading from "../components/Loading";
+import { useAppSelector } from "@/hooks/useAppSelector";
+import PublicRouter from "@/routers/PublicRouter";
+import ProtectedRouter from "@/routers/ProtectedRouter";
+import Loading from "@/components/Loading";
 
 const AppRouter = () => {
   const isLoggedIn = useAppSelector((state) => state.auth.isLoggedIn);

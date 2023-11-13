@@ -1,5 +1,5 @@
 import { Title } from "rizzui";
-import cn from "../../utils/helpers/class-names";
+import cn from "@/utils/helpers/class-names";
 import { ForwardedRef, forwardRef } from "react";
 import React from "react";
 
@@ -41,30 +41,13 @@ function WidgetCard(
   ref: ForwardedRef<HTMLDivElement>
 ) {
   return (
-    <div
-      className={cn(
-        widgetCardClasses.base,
-        widgetCardClasses.rounded[rounded],
-        className
-      )}
-      ref={ref}
-    >
-      <div
-        className={cn(
-          action && "flex items-start justify-between",
-          headerClassName
-        )}
-      >
+    <div className={cn(widgetCardClasses.base, widgetCardClasses.rounded[rounded], className)} ref={ref}>
+      <div className={cn(action && "flex items-start justify-between", headerClassName)}>
         <div>
-          <Title
-            as="h3"
-            className={cn("text-base font-semibold sm:text-lg", titleClassName)}
-          >
+          <Title as="h3" className={cn("text-base font-semibold sm:text-lg", titleClassName)}>
             {title}
           </Title>
-          {description && (
-            <div className={descriptionClassName}>{description}</div>
-          )}
+          {description && <div className={descriptionClassName}>{description}</div>}
         </div>
         {action && <div className={cn("ps-2", actionClassSName)}>{action}</div>}
       </div>

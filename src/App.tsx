@@ -1,7 +1,7 @@
-import store from "./store";
+import store from "@/store";
 import { Provider } from "react-redux";
 import { Toaster } from "react-hot-toast";
-import AppRouter from "./routers/AppRouter";
+import AppRouter from "@/routers/AppRouter";
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {

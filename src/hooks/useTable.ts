@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from "react";
 import { isString } from "lodash";
-import useFetch from "./useFetch";
-import { REQUEST_TYPE } from "../utils/types";
-import { useModal } from "./useModal";
+import useFetch from "@/hooks/useFetch";
+import { REQUEST_TYPE } from "@/utils/types";
+import { useModal } from "@/hooks/useModal";
 
 interface AnyObject {
   [key: string]: any;

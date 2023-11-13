@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../hooks/useAppDispatch";
-import { logout } from "../store/slices/auth";
+import { useAppDispatch } from "@/hooks/useAppDispatch";
+import { logout } from "@/store/slices/auth";
 import {
   LuUserCircle2,
   LuBell,
@@ -20,7 +20,7 @@ import {
   LuUser2,
   LuPanelRightClose,
 } from "react-icons/lu";
-import { useAppSelector } from "../hooks/useAppSelector";
+import { useAppSelector } from "@/hooks/useAppSelector";
 import toast from "react-hot-toast";
 
 const Header = () => {

@@ -1,11 +1,11 @@
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useState } from "react";
-import { useAppDispatch } from "./useAppDispatch";
+import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { useNavigate } from "react-router-dom";
-import { SendRequestProps } from "../utils/types";
-import { getRequestConfig } from "../utils/helpers";
-import { useAppSelector } from "./useAppSelector";
+import { SendRequestProps } from "@/utils/types";
+import { getRequestConfig } from "@/utils/helpers";
+import { useAppSelector } from "@/hooks/useAppSelector";
 
 const useFetch = () => {
   const [isLoading, setIsLoading] = useState(false);

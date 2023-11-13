@@ -1,9 +1,9 @@
 import { PiXBold } from "react-icons/pi";
 import { Title, ActionIcon, Input, Button } from "rizzui";
-import { useModal } from "../../hooks/useModal";
+import { useModal } from "@/hooks/useModal";
 import { useFormik } from "formik";
-import useFetch from "../../hooks/useFetch";
-import { REQUEST_TYPE } from "../../utils/types";
+import useFetch from "@/hooks/useFetch";
+import { REQUEST_TYPE } from "@/utils/types";
 
 export const AddUSer = () => {
   const { closeModal } = useModal();
@@ -35,7 +35,7 @@ export const AddUSer = () => {
 
       await sendRequest({
         type: REQUEST_TYPE.ADD_USER,
-        data: report,
+        formData: report,
       });
 
       sendRequest({ type: REQUEST_TYPE.USER });

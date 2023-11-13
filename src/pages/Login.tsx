@@ -1,6 +1,6 @@
-import useFetch from "../hooks/useFetch";
+import useFetch from "@/hooks/useFetch";
 import { ChangeEvent, FormEvent, useState } from "react";
-import { REQUEST_TYPE } from "../utils/types";
+import { REQUEST_TYPE } from "@/utils/types";
 import { PiSignInBold } from "react-icons/pi";
 import { FiLoader } from "react-icons/fi";
 

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Checkbox, Tooltip, ActionIcon, Badge, AvatarProps, cn } from "rizzui";
-import { HeaderCell } from "./Table";
-import { formatDate } from "../../utils/helpers/format-date";
-import DeletePopover from "../Popover/delete";
-import { EditUser } from "../Form/EditUser";
+import { HeaderCell } from "@/components/Table/Table";
+import { formatDate } from "@/utils/helpers/format-date";
+import DeletePopover from "@/components/Popover/delete";
+import { EditUser } from "@/components/Form/EditUser";
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 

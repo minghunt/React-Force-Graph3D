@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Modal } from "rizzui";
-import { useModal } from "../../hooks/useModal";
+import { useModal } from "@/hooks/useModal";
 
 export default function GlobalModal() {
   const { isOpen, view, closeModal, customSize } = useModal();

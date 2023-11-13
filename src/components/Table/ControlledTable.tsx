@@ -1,24 +1,9 @@
 import { isEmpty } from "lodash";
 import { useState } from "react";
-import {
-  PiMagnifyingGlassBold,
-  PiFunnel,
-  PiTextColumns,
-  PiXBold,
-} from "react-icons/pi";
+import { PiMagnifyingGlassBold, PiFunnel, PiTextColumns, PiXBold } from "react-icons/pi";
 import { useMedia } from "react-use";
-import {
-  Title,
-  cn,
-  Input,
-  Button,
-  Popover,
-  CheckboxGroup,
-  Checkbox,
-  ActionIcon,
-  Drawer,
-} from "rizzui";
-import { Table, TableProps } from "./Table";
+import { Title, cn, Input, Button, Popover, CheckboxGroup, Checkbox, ActionIcon, Drawer } from "rizzui";
+import { Table, TableProps } from "@/components/Table/Table";
 
 type ControlledTableProps = {
   isLoading?: boolean;
@@ -58,27 +43,15 @@ export function ControlledTable({
 
   return (
     <>
-      {!isEmpty(filterOptions) && (
-        <TableFilter {...filterOptions}>{filterElement}</TableFilter>
-      )}
+      {!isEmpty(filterOptions) && <TableFilter {...filterOptions}>{filterElement}</TableFilter>}
 
       <div className="relative">
-        <Table
-          scroll={{ x: 1000, y: 1000 }}
-          rowKey={(record) => record.id}
-          className={cn(className)}
-          {...tableProps}
-        />
+        <Table scroll={{ x: 1000, y: 1000 }} rowKey={(record) => record.id} className={cn(className)} {...tableProps} />
 
         {tableFooter ? tableFooter : null}
       </div>
 
-      {!isEmpty(paginatorOptions) && (
-        <TablePagination
-          paginatorClassName={paginatorClassName}
-          {...paginatorOptions}
-        />
-      )}
+      {!isEmpty(paginatorOptions) && <TablePagination paginatorClassName={paginatorClassName} {...paginatorOptions} />}
     </>
   );
 }
@@ -134,9 +107,7 @@ export function TableFilter({
           />
         ) : null}
 
-        {showSearchOnTheRight && enableDrawerFilter ? (
-          <>{menu ? menu : null}</>
-        ) : null}
+        {showSearchOnTheRight && enableDrawerFilter ? <>{menu ? menu : null}</> : null}
 
         {children && (
           <>
@@ -183,15 +154,11 @@ export function TableFilter({
             variant={"outline"}
             className={cn(
               "me-2.5 h-9 pe-3 ps-2.5",
-              !(isMediumScreen || enableDrawerFilter) &&
-                showFilters &&
-                "border-dashed border-gray-700"
+              !(isMediumScreen || enableDrawerFilter) && showFilters && "border-dashed border-gray-700"
             )}
           >
             <PiFunnel className="me-1.5 h-[18px] w-[18px]" strokeWidth={1.7} />
-            {!(isMediumScreen || enableDrawerFilter) && showFilters
-              ? "Hide Filters"
-              : "Filters"}
+            {!(isMediumScreen || enableDrawerFilter) && showFilters ? "Hide Filters" : "Filters"}
           </Button>
         ) : null}
 
@@ -213,12 +180,7 @@ type ToggleColumnsTypes<T> = {
   hideIndex?: number;
 };
 
-export function ToggleColumns<T>({
-  columns,
-  checkedColumns,
-  setCheckedColumns,
-  hideIndex,
-}: ToggleColumnsTypes<T>) {
+export function ToggleColumns<T>({ columns, checkedColumns, setCheckedColumns, hideIndex }: ToggleColumnsTypes<T>) {
   return (
     <div className="">
       <Popover
@@ -239,9 +201,7 @@ export function ToggleColumns<T>({
                   label={column.dataIndex}
                   labelClassName="ml-2 rtl:mr-2 text-[13px] font-medium"
                   containerClassName="cursor-pointer capitalize"
-                  className={cn(
-                    hideIndex && index === hideIndex ? "hidden" : ""
-                  )}
+                  className={cn(hideIndex && index === hideIndex ? "hidden" : "")}
                 />
               ))}
             </CheckboxGroup>
@@ -296,11 +256,7 @@ function FilterDrawerView({
             {children}
           </div>
         </div>
-        <Button
-          size="lg"
-          onClick={() => setOpenDrawer(false)}
-          className="mt-5 h-11 w-full text-sm"
-        >
+        <Button size="lg" onClick={() => setOpenDrawer(false)} className="mt-5 h-11 w-full text-sm">
           Show Results
         </Button>
       </div>
@@ -329,12 +285,7 @@ export default function TablePagination({
   }
 
   return (
-    <div
-      className={cn(
-        "table-pagination flex items-center justify-center sm:justify-between",
-        paginatorClassName
-      )}
-    >
+    <div className={cn("table-pagination flex items-center justify-center sm:justify-between", paginatorClassName)}>
       {!setPageSize ? (
         total && (
           <div className="hidden text-gray-500 sm:inline-flex">
