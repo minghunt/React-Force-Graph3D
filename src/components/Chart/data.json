@@ -1,0 +1,67 @@
+[
+  {
+    "name": "First",
+    "color":"#fff",
+    
+    "children": [
+      {
+        "color":"transparent",
+        "name": "A1",
+        "value": 100
+      },
+      {
+        "name": "A2",
+        "value": 60
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      }
+    ]
+  }
+ 
+]
