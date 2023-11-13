@@ -6,15 +6,20 @@ import ProtectedRouter from "@/routers/ProtectedRouter";
 import Loading from "@/components/Loading";
 
 const AppRouter = () => {
-  const isLoggedIn = useAppSelector((state) => state.auth.isLoggedIn);
+    // const isLoggedIn = useAppSelector((state) => state.auth.isLoggedIn);
+    const isLoggedIn = true;
 
-  return (
-    <Suspense fallback={<Loading />}>
-      <Routes>
-        {isLoggedIn ? <Route path="*" element={<ProtectedRouter />} /> : <Route path="*" element={<PublicRouter />} />}
-      </Routes>
-    </Suspense>
-  );
+    return (
+        <Suspense fallback={<Loading />}>
+            <Routes>
+                {isLoggedIn ? (
+                    <Route path="*" element={<ProtectedRouter />} />
+                ) : (
+                    <Route path="*" element={<PublicRouter />} />
+                )}
+            </Routes>
+        </Suspense>
+    );
 };
 
 export default AppRouter;

@@ -21,7 +21,7 @@
 
 @layer components {
   .bg-image-main {
-    @apply bg-[url('assets/images/background3.jpg')] bg-center bg-cover;
+    @apply bg-[url('https://demo.viettelcybersecurity.com/static/images/dashboard/bg.png')] bg-center bg-cover;
   }
 
   .bg-image-login {
