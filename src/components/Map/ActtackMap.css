@@ -1,0 +1,106 @@
+#chartdiv {
+    width: 100%;
+    height: 100;
+}
+
+.amcharts-myline path {
+    stroke-dasharray: 50%;
+    stroke-dashoffset: 0;
+    animation: am-draw 3s linear infinite;
+}
+
+@-webkit-keyframes am-draw {
+    0% {
+        stroke-dashoffset: 100%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+
+@keyframes am-draw {
+    0% {
+        stroke-dashoffset: 100%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+
+.attack_live {
+    width: 100%;
+}
+
+.attack_live .container_title {
+    border-bottom: .5px solid #adff2f;
+}
+
+.container_live {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    z-index: 1;
+    width: 10vw;
+    height: 35vh;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(0, 255, 47, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7) inset;
+}
+
+.fs_sm1_w {
+    font-size: 1.2em;
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 5px red;
+    text-transform: uppercase;
+    animation: effect_titles 3s linear infinite;
+}
+
+.border_r_light_blue {
+    color: #adff2f;
+}
+
+.cn_del_attack {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.fl_sm_cl {
+    width: 20%;
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+}
+
+.fl_lg_cl {
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+}
+
+@keyframes effect_titles {
+    0% {
+        color: rgb(173, 255, 47);
+        text-shadow: 0 0 5px rgb(173, 255, 47);
+    }
+    25% {
+        color: rgba(172, 255, 47, 0.75);
+        text-shadow: 0 0 5px rgba(172, 255, 47, 0.75);
+    }
+    50% {
+        color: rgba(172, 255, 47, 0.5);
+        text-shadow: 0 0 5px rgba(172, 255, 47, 0.5);
+    }
+    75% {
+        color: rgba(172, 255, 47, 0.75);
+        text-shadow: 0 0 5px rgba(172, 255, 47, 0.75);
+    }
+    100% {
+        color: rgba(172, 255, 47, 0.75);
+        text-shadow: 0 0 5px rgba(172, 255, 47, 1);
+    }
+}
