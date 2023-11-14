@@ -129,7 +129,7 @@ const Map = () => {
     // ============ data test end ============
     const vietnamCoords = { latitude: 10.762622, longitude: 106.660172 };
     useEffect(() => {
-        var AttackMap = am4core.create("chartdiv", am4maps.MapChart); // ==== create chart root : name chartdiv
+        var AttackMap = am4core.create("map", am4maps.MapChart); // ==== create chart root : name chartdiv
 
         // Set map definition
         AttackMap.geodata = am4geodata_worldLow;
@@ -397,11 +397,8 @@ const Map = () => {
 
     return (
         <>
-            <div className="container-fluid h-screen">
-                <div
-                    id="chartdiv"
-                    style={{ width: "100%", height: "100%" }}
-                ></div>
+            <div className="container-fluid h-full">
+                <div id="map" style={{ width: "100%", height: "100%" }}></div>
             </div>
         </>
     );

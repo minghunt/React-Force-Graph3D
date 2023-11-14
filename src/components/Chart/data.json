@@ -1,0 +1,101 @@
+[
+  {
+    "name": "First",
+    "color":"#fff",
+    "children": [
+      {
+        "color": "#FFD700",
+        "name": "A1",
+        "value": 100,
+        "children": [ 
+          {
+            "color": "#FFB6C1",
+            "name": "A1-1",
+            "value": 70
+          },
+          {
+            "color": "#87CEFA",
+            "name": "A1-2",
+            "value": 40
+          },
+          {
+            "color": "#98FB98",
+            "name": "A1-3",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "name": "A2",
+        "value": 60
+      },
+      {
+        "name": "A3",
+        "value": 15
+      },
+      {
+        "name": "A3",
+        "value": 100
+      },
+      {
+        "name": "A3",
+        "value": 22
+      },
+      {
+        "name": "A3",
+        "value": 40
+      },
+      {
+        "name": "A3",
+        "value": 30,
+        "children": [ 
+          {
+            "color": "#FFB6C1",
+            "name": "A3-1",
+            "value": 10
+          },
+          {
+            "color": "#87CEFA",
+            "name": "A1-2",
+            "value": 40
+          },
+          {
+            "color": "#98FB98",
+            "name": "A1-3",
+            "value": 20
+          }
+        ]
+
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      },
+      {
+        "name": "A3",
+        "value": 30
+      }
+    ]
+  }
+ 
+]
