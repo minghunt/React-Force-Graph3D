@@ -89,7 +89,7 @@ function TreeGrap() {
 
             data={data}
             height={400}
-            width={600}
+            width={500}
         />
     );
 }

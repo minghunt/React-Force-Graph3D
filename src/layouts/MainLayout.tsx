@@ -14,7 +14,7 @@ const MainLayout = () => {
     // }, []);
 
     return (
-        <div className="bg-image-main min-h-screen flex flex-col p-4 gap-4">
+        <div className="bg-image-main min-h-screen flex flex-col  gap-4">
             <StarsCanvas />
             <Header />
             <Outlet />
