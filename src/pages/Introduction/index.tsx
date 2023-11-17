@@ -1,18 +1,18 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
-import {
-  Autoplay,
-  EffectCoverflow,
-  Navigation,
-  Pagination,
-} from "swiper/modules";
-import "./style.css";
-// Import Swiper styles
-// import "swiper/swiper.scss";
-// import "swiper/components/navigation/navigation.scss";
-// import "swiper/components/pagination/pagination.scss";
-// import "swiper/components/effect-coverflow/effect-coverflow.scss";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+  Autoplay,
+} from "swiper/modules";
+
+import "./style.css";
 SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 
 const Introduction = () => {
@@ -52,7 +52,7 @@ const Introduction = () => {
         effect="coverflow"
         coverflowEffect={{
           rotate: 60,
-          stretch: 50,
+          stretch: 28,
           depth: 100,
           modifier: 1,
           slideShadows: false,
@@ -65,7 +65,7 @@ const Introduction = () => {
         parallax={true}
         slidesPerView={2}
         centeredSlides
-        style={{ height: "600px", padding: "10px" }}
+        style={{ height: "620px", padding: "10px" }}
       >
         {duplicatedSlides.map((slice) => (
           <SwiperSlide
