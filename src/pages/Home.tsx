@@ -1,3 +1,5 @@
+import Introduction from "./Introduction";
+
 const Home = () => {
     return (
         <section className="flex-1 grid grid-cols-3 gap-4">

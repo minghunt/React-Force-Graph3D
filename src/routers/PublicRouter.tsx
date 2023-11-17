@@ -9,19 +9,21 @@ const Register = lazy(() => import("@/pages/Register"));
 const Introduction = lazy(() => import("@/pages/Introduction/index"));
 
 const PublicRouter = () => {
-  return (
-    <Suspense fallback={<Loading />}>
-      <Routes>
-        <Route element={<BlankLayout />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/introduction" element={<Introduction />} />
-
-          <Route path="/register" element={<Register />} />
-        </Route>
-        <Route path="*" element={<Navigate to={"/login"} replace={true} />} />
-      </Routes>
-    </Suspense>
-  );
+    return (
+        <Suspense fallback={<Loading />}>
+            <Routes>
+                <Route element={<BlankLayout />}>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/introduction" element={<Introduction />} />
+                    <Route path="/register" element={<Register />} />
+                </Route>
+                <Route
+                    path="*"
+                    element={<Navigate to={"/login"} replace={true} />}
+                />
+            </Routes>
+        </Suspense>
+    );
 };
 
 export default PublicRouter;
