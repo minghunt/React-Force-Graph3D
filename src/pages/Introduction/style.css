@@ -1,8 +1,8 @@
 /* Đặt các thuộc tính mới khi slide được chọn */
 .swiper-slide-active {
   animation: none; /* Ngừng animation mặc định */
-  height: 300px;
-  margin-top: 74px;
+  height: 420px;
+  margin-top: 90px;
   opacity: 1;
   animation: slideAnimation 1s ease-in-out;
 }
@@ -10,12 +10,12 @@
 @keyframes slideAnimation {
   from {
     height: 50px;
-    margin-top: 50px;
+    margin-top: 90px;
     opacity: 0.3;
   }
   to {
-    height: 300px;
-    margin-top: 74px;
+    height: 420px;
+    margin-top: 90px;
     opacity: 1;
   }
 }

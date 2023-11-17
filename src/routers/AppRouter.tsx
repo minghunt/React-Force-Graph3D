@@ -7,7 +7,7 @@ import Loading from "@/components/Loading";
 
 const AppRouter = () => {
     // const isLoggedIn = useAppSelector((state) => state.auth.isLoggedIn);
-    const isLoggedIn = false;
+    const isLoggedIn = true;
 
     return (
         <Suspense fallback={<Loading />}>
