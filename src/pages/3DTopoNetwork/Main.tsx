@@ -67,7 +67,6 @@ const Main = () => {
     return { nodes: visibleNodes, links: visibleLinks };
   }, [nodesById]);
 
-  const GROUPS = 12
 
   const [prunedTree, setPrunedTree] = useState(getPrunedTree() as any);
   const handleNodeClick = useCallback(node => {
@@ -90,8 +89,22 @@ const Main = () => {
           nodeThreeObject={({ img, name, logMessage, collapsed, childLinks }) => {
             const group = new THREE.Group();
 
+            if (collapsed) {
+              let size = 3;
+              if (collapsed)
+                size = 1
+              console.log('tree',prunedTree)
+              console.log('child',childLinks)
+              const geometry = new THREE.SphereGeometry(size * 20, size * 20, size * 20);
+              const materialModel = new THREE.MeshBasicMaterial({
+                color: 'red', transparent: true, opacity: 0.3,
+                depthWrite: false, // Tắt ghi depth để phần trong vẫn được nhìn thấy
+                depthTest: true
+              }); // Màu đỏ cho node
+              const sphere = new THREE.Mesh(geometry, materialModel);
+              group.add(sphere);
+            }
 
-            
 
             if (logMessage === 'Error') {
               let size = 3;
@@ -107,13 +120,6 @@ const Main = () => {
               const sphere = new THREE.Mesh(geometry, materialModel);
               group.add(sphere);
             }
-            //          if(logMessage==='Error'){
-            //             const geometry = new THREE.BoxGeometry(100,100,100);
-            // const materialModel = new THREE.MeshLambertMaterial({ color: 'red', transparent: true, opacity: 0.2 }); // Màu đỏ cho node
-            // const sphere = new THREE.Mesh(geometry, materialModel);
-            // group.add(sphere);
-
-            //          }
 
             //Check img message
             let imgLogMessage = ''
