@@ -1,0 +1,925 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "User Laptop",
+      "img": "user.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 1,
+      "name": "Hà Nội",
+      "img": "cloud_server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 2,
+      "name": "Hồ Chí Minh",
+      "img": "cloud_server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 3,
+      "name": "Đà Nẵng",
+      "img": "cloud_server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 4,
+      "name": "Server 1",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 5,
+      "name": "Server 2",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 6,
+      "name": "Server 3",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 7,
+      "name": "Switch 1",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 8,
+      "name": "Switch 2",
+      "img": "switch.png",
+      "logMessage": "Error"
+    },
+    {
+      "id": 9,
+      "name": "Router",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 10,
+      "name": "Wifi Router",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 11,
+      "name": "Database",
+      "img": "database.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 12,
+      "name": "Router",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 13,
+      "name": "Wifi Router",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 14,
+      "name": "Router",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 15,
+      "name": "Switch 1",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 16,
+      "name": "Switch 2",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 17,
+      "name": "Switch 3",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 18,
+      "name": "Switch 4",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 19,
+      "name": "Database",
+      "img": "database.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 20,
+      "name": "Router 1",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 21,
+      "name": "Router 2",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 22,
+      "name": "Router 3",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 23,
+      "name": "Wifi Router 1",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 24,
+      "name": "Wifi Router 2",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 25,
+      "name": "Wifi Router 1",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 26,
+      "name": "Router 2",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 27,
+      "name": "Wifi Router 3",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 28,
+      "name": "Router 1",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 29,
+      "name": "Router 2",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 30,
+      "name": "Wifi Router 3",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 31,
+      "name": "Switch 1",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 32,
+      "name": "Switch 2",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 33,
+      "name": "Database",
+      "img": "database.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 34,
+      "name": "Router 1",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 35,
+      "name": "Router 2",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 36,
+      "name": "Wifi Router 1",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 37,
+      "name": "Wifi Router 2",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 38,
+      "name": "Server 2-1",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 39,
+      "name": "Server 2-2",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 40,
+      "name": "Server 2-3",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 41,
+      "name": "Switch 2-1",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 42,
+      "name": "Switch 2-2",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 43,
+      "name": "Server 3-1",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 44,
+      "name": "Server 3-2",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 45,
+      "name": "Server 3-3",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 46,
+      "name": "Switch 3-1",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 47,
+      "name": "Switch 3-2",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 48,
+      "name": "Database 2",
+      "img": "database.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 49,
+      "name": "Router 2-1",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 50,
+      "name": "Wifi Router 2-1",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 51,
+      "name": "Wifi Router 2-2",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 52,
+      "name": "Database 3",
+      "img": "database.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 53,
+      "name": "Router 3-1",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 54,
+      "name": "Wifi Router 3-1",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 55,
+      "name": "Wifi Router 3-2",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 56,
+      "name": "Server 2-4",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 57,
+      "name": "Switch 2-3",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 58,
+      "name": "Router 2-2",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 59,
+      "name": "Wifi Router 2-3",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 60,
+      "name": "Server 3-4",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 61,
+      "name": "Switch 3-3",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 62,
+      "name": "Router 3-2",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 63,
+      "name": "Wifi Router 3-3",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 64,
+      "name": "Subserver 2-2-1",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 65,
+      "name": "Subserver 2-2-2",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 66,
+      "name": "Switch 2-2-1",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 67,
+      "name": "Router 2-2-1",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 68,
+      "name": "Wifi Router 2-2-1",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 69,
+      "name": "Subserver 2-3-1",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 70,
+      "name": "Subserver 2-3-2",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 71,
+      "name": "Switch 2-3-1",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 72,
+      "name": "Router 2-3-1",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 73,
+      "name": "Wifi Router 2-3-1",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 74,
+      "name": "Subserver 3-2-1",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 75,
+      "name": "Subserver 3-2-2",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 76,
+      "name": "Switch 3-2-1",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 77,
+      "name": "Router 3-2-1",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 78,
+      "name": "Wifi Router 3-2-1",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 79,
+      "name": "Subserver 3-3-1",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 80,
+      "name": "Subserver 3-3-2",
+      "img": "server.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 81,
+      "name": "Switch 3-3-1",
+      "img": "switch.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 82,
+      "name": "Router 3-3-1",
+      "img": "router.png",
+      "logMessage": "Safe"
+    },
+    {
+      "id": 83,
+      "name": "Wifi Router 3-3-1",
+      "img": "wifi_router.png",
+      "logMessage": "Safe"
+    }
+  ],
+  "links": [
+    {
+      "target": 1,
+      "source": 0,
+      "distance": 150
+    },
+    {
+      "target": 2,
+      "source": 0,
+      "distance": 150
+    },
+    {
+      "target": 3,
+      "source": 0,
+      "distance": 150
+    },
+    {
+      "target": 4,
+      "source": 1,
+      "distance": 100
+    },
+    {
+      "target": 5,
+      "source": 1,
+      "distance": 100
+    },
+    {
+      "target": 6,
+      "source": 1,
+      "distance": 100
+    },
+    {
+      "target": 7,
+      "source": 4,
+      "distance": 80
+    },
+    {
+      "target": 8,
+      "source": 4,
+      "distance": 80
+    },
+    {
+      "target": 15,
+      "source": 5,
+      "distance": 80
+    },
+    {
+      "target": 16,
+      "source": 5,
+      "distance": 80
+    },
+    {
+      "target": 17,
+      "source": 5,
+      "distance": 80
+    },
+    {
+      "target": 18,
+      "source": 5,
+      "distance": 80
+    },
+    {
+      "target": 19,
+      "source": 5,
+      "distance": 80
+    },
+    {
+      "target": 31,
+      "source": 6,
+      "distance": 80
+    },
+    {
+      "target": 32,
+      "source": 6,
+      "distance": 80
+    },
+    {
+      "target": 33,
+      "source": 6,
+      "distance": 80
+    },
+    {
+      "target": 11,
+      "source": 4,
+      "distance": 50
+    },
+    {
+      "target": 9,
+      "source": 7,
+      "distance": 50
+    },
+    {
+      "target": 10,
+      "source": 7,
+      "distance": 50
+    },
+    {
+      "target": 12,
+      "source": 8,
+      "distance": 50
+    },
+    {
+      "target": 13,
+      "source": 8,
+      "distance": 50
+    },
+    {
+      "target": 14,
+      "source": 8,
+      "distance": 50
+    },
+    {
+      "target": 20,
+      "source": 15,
+      "distance": 50
+    },
+    {
+      "target": 21,
+      "source": 15,
+      "distance": 50
+    },
+    {
+      "target": 22,
+      "source": 15,
+      "distance": 50
+    },
+    {
+      "target": 23,
+      "source": 16,
+      "distance": 50
+    },
+    {
+      "target": 24,
+      "source": 16,
+      "distance": 50
+    },
+    {
+      "target": 25,
+      "source": 17,
+      "distance": 50
+    },
+    {
+      "target": 26,
+      "source": 17,
+      "distance": 50
+    },
+    {
+      "target": 27,
+      "source": 17,
+      "distance": 50
+    },
+    {
+      "target": 28,
+      "source": 18,
+      "distance": 50
+    },
+    {
+      "target": 29,
+      "source": 18,
+      "distance": 50
+    },
+    {
+      "target": 30,
+      "source": 18,
+      "distance": 50
+    },
+    {
+      "target": 34,
+      "source": 31,
+      "distance": 50
+    },
+    {
+      "target": 35,
+      "source": 31,
+      "distance": 50
+    },
+    {
+      "target": 36,
+      "source": 32,
+      "distance": 50
+    },
+    {
+      "target": 37,
+      "source": 32,
+      "distance": 50
+    },
+    {
+      "target": 38,
+      "source": 2,
+      "distance": 100
+    },
+    {
+      "target": 39,
+      "source": 2,
+      "distance": 100
+    },
+    {
+      "target": 40,
+      "source": 2,
+      "distance": 100
+    },
+    {
+      "target": 41,
+      "source": 38,
+      "distance": 80
+    },
+    {
+      "target": 42,
+      "source": 38,
+      "distance": 80
+    },
+    {
+      "target": 43,
+      "source": 3,
+      "distance": 100
+    },
+    {
+      "target": 44,
+      "source": 3,
+      "distance": 100
+    },
+    {
+      "target": 45,
+      "source": 3,
+      "distance": 100
+    },
+    {
+      "target": 46,
+      "source": 43,
+      "distance": 80
+    },
+    {
+      "target": 47,
+      "source": 43,
+      "distance": 80
+    },
+    {
+      "target": 48,
+      "source": 38,
+      "distance": 50
+    },
+    {
+      "target": 49,
+      "source": 41,
+      "distance": 50
+    },
+    {
+      "target": 50,
+      "source": 41,
+      "distance": 50
+    },
+    {
+      "target": 51,
+      "source": 42,
+      "distance": 50
+    },
+    {
+      "target": 52,
+      "source": 43,
+      "distance": 50
+    },
+    {
+      "target": 53,
+      "source": 46,
+      "distance": 50
+    },
+    {
+      "target": 54,
+      "source": 46,
+      "distance": 50
+    },
+    {
+      "target": 55,
+      "source": 47,
+      "distance": 50
+    },
+    {
+      "target": 56,
+      "source": 2,
+      "distance": 100
+    },
+    {
+      "target": 57,
+      "source": 56,
+      "distance": 80
+    },
+    {
+      "target": 58,
+      "source": 57,
+      "distance": 50
+    },
+    {
+      "target": 59,
+      "source": 57,
+      "distance": 50
+    },
+    {
+      "target": 60,
+      "source": 3,
+      "distance": 100
+    },
+    {
+      "target": 61,
+      "source": 60,
+      "distance": 80
+    },
+    {
+      "target": 62,
+      "source": 61,
+      "distance": 50
+    },
+    {
+      "target": 63,
+      "source": 61,
+      "distance": 50
+    },
+    {
+      "target": 64,
+      "source": 39,
+      "distance": 70
+    },
+    {
+      "target": 65,
+      "source": 39,
+      "distance": 70
+    },
+    {
+      "target": 66,
+      "source": 64,
+      "distance": 50
+    },
+    {
+      "target": 67,
+      "source": 66,
+      "distance": 40
+    },
+    {
+      "target": 68,
+      "source": 66,
+      "distance": 40
+    },
+    {
+      "target": 69,
+      "source": 40,
+      "distance": 70
+    },
+    {
+      "target": 70,
+      "source": 40,
+      "distance": 70
+    },
+    {
+      "target": 71,
+      "source": 69,
+      "distance": 50
+    },
+    {
+      "target": 72,
+      "source": 71,
+      "distance": 40
+    },
+    {
+      "target": 73,
+      "source": 71,
+      "distance": 40
+    },
+    {
+      "target": 74,
+      "source": 44,
+      "distance": 70
+    },
+    {
+      "target": 75,
+      "source": 44,
+      "distance": 70
+    },
+    {
+      "target": 76,
+      "source": 74,
+      "distance": 50
+    },
+    {
+      "target": 77,
+      "source": 76,
+      "distance": 40
+    },
+    {
+      "target": 78,
+      "source": 76,
+      "distance": 40
+    },
+    {
+      "target": 79,
+      "source": 45,
+      "distance": 70
+    },
+    {
+      "target": 80,
+      "source": 45,
+      "distance": 70
+    },
+    {
+      "target": 81,
+      "source": 79,
+      "distance": 50
+    },
+    {
+      "target": 82,
+      "source": 81,
+      "distance": 40
+    },
+    {
+      "target": 83,
+      "source": 81,
+      "distance": 40
+    }
+  ]
+}

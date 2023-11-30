@@ -2,7 +2,6 @@ import React from "react";
 
 import cn from "@/utils/helpers/class-names";
 import WidgetCard from "@/components/ui/WidgetCard";
-import { Button } from "rizzui";
 import { useTable } from "@/hooks/useTable";
 import { useColumn } from "@/hooks/useColumn";
 
@@ -118,25 +117,12 @@ export default function BasicTableWidget({
 
   return (
     <WidgetCard
+
       title={title}
       className={cn("flex flex-col", className)}
       headerClassName="widget-card-header  flex-col sm:flex-row [&>.ps-2]:ps-0 [&>.ps-2]:w-full sm:[&>.ps-2]:w-auto [&>.ps-2]:mt-3 sm:[&>.ps-2]:mt-0"
     >
-      <div className="flex justify-end mb-4">
-        <Button
-          onClick={() => {
-            openModal({
-              view: <AddUSer />,
-              customSize: "480px",
-            }),
-              console.log("open");
-          }}
-          variant="outline"
-          className="text-lg"
-        >
-          Add New
-        </Button>
-      </div>
+     
       <div className={cn("table-wrapper flex-grow", noGutter && "-mx-5 lg:-mx-7")}>
         <ControlledTable
           isLoading={isLoading}
@@ -179,7 +165,6 @@ export default function BasicTableWidget({
 import { Empty } from "rizzui";
 
 import RcTable from "rc-table";
-import { AddUSer } from "../Form/AddUser";
 import { ControlledTable } from "./ControlledTable";
 
 export type ExtractProps<T> = T extends React.ComponentType<infer P> ? P : T;
@@ -192,7 +177,7 @@ const classes = {
   tCell: "[&_.rc-table-cell]:px-3 [&_th.rc-table-cell]:py-3 [&_td.rc-table-cell]:py-4",
   variants: {
     classic:
-      "[&_thead]:bg-gray-100 [&_.rc-table-container]:border-x [&_.rc-table-container]:border-gray-200/70 [&_td.rc-table-cell]:border-b [&_td.rc-table-cell]:border-gray-200/70 [&_thead]:border-y [&_thead]:border-gray-200/70",
+      "[&_thead]:bg-red-100 [&_.rc-table-container]:border-x [&_.rc-table-container]:border-gray-200/70 [&_td.rc-table-cell]:border-b [&_td.rc-table-cell]:border-gray-200/70 [&_thead]:border-y [&_thead]:border-gray-200/70",
     modern:
       "[&_thead_th]:bg-gray-100 [&_td.rc-table-cell]:border-b [&_td.rc-table-cell]:border-gray-200/70 [&_thead_.rc-table-row-expand-icon-cell]:bg-gray-100",
     minimal:
@@ -201,9 +186,7 @@ const classes = {
       "[&_thead]:border-y [&_thead]:border-gray-200/70 [&_td.rc-table-cell]:border-b [&_td.rc-table-cell]:border-gray-200/70",
     retro:
       "[&_thead]:border-y [&_thead]:border-gray-200/70 [&_tbody_tr:last-child_td.rc-table-cell]:border-b [&_tbody_tr:last-child_td.rc-table-cell]:border-gray-200/70",
-      hung_custom:
-      "[&_.rc-table-row:hover]:bg-black [&_.rc-table-row]:text-white [&_thead]:bg-gray-100 [&_.rc-table-container]:border-x [&_.rc-table-container]:border-gray-200/70 [&_td.rc-table-cell]:border-b [&_td.rc-table-cell]:border-gray-200/70 [&_thead]:border-y [&_thead]:border-gray-200/70",
-    },
+  },
   striped: "[&_.rc-table-row:nth-child(2n)_.rc-table-cell]:bg-gray-100/50 [&_.rc-table-row:hover]:bg-transparent",
 };
 

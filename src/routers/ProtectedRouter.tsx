@@ -9,6 +9,9 @@ const Dashboard1 = lazy(() => import("@/pages/Dashboards/Dashboard1"));
 const Dashboard2 = lazy(() => import("@/pages/Dashboards/Dashboard2"));
 const Dashboard3 = lazy(() => import("@/pages/Dashboards/Dashboard3"));
 const Dashboard4 = lazy(() => import("@/pages/Dashboards/Dashboard4"));
+const Table = lazy(() => import("@/pages/HungTable/Main"));
+const Main = lazy(() => import("@/pages/3DTopoNetwork/Main"));
+
 
 const ProtectedRouter = () => {
     return (
@@ -20,6 +23,9 @@ const ProtectedRouter = () => {
                     <Route path="/dashboard_02" element={<Dashboard2 />} />
                     <Route path="/dashboard_03" element={<Dashboard3 />} />
                     <Route path="/dashboard_04" element={<Dashboard4 />} />
+                    <Route path="/table-hung" element={<Table />} />
+                    <Route path="/3d" element={<Main />} />
+
                 </Route>
 
                 <Route element={<SidebarLayout />}>
